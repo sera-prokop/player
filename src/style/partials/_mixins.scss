@@ -1,0 +1,23 @@
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+@mixin triangle() {
+  &:before{
+    content: "";
+    width: 0;
+    height: 0;
+    border-bottom: 15px solid #fff;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    position: absolute;
+    top: -15px;
+  }
+}

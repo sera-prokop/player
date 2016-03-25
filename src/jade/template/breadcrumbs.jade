@@ -1,8 +1,0 @@
-.breadcrumbs
-  .center
-    - var breadcrumbsItem = ['Главная', 'Каталог']
-    - var breadcrumbsLink = ['/', '#']
-    ul.breadcrumbs__list
-      each item, ndx in breadcrumbsItem
-        li.breadcrumbs__item
-          a(href="#" class="#{ndx === breadcrumbsItem.length - 1 ? 'breadcrumbs__link--active' : ''}").breadcrumbs__link= item

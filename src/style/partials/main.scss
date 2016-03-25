@@ -1,0 +1,16 @@
+.main{
+  @include clearfix();
+  min-width: 600px;
+  width: 96%;
+  margin: 0 auto;
+  margin-top: 30px;
+  font-family: 'robotoregular', sans-serif;
+}
+.left{
+  float: left;
+  width: 75.256222%;//1028
+}
+.right{
+  float: right;
+  width: 24.743777%;//338
+}

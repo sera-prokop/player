@@ -1,8 +1,8 @@
- {
+{
   "name": "sera.prokop",
   "version": "1.0.0",
-  "scripts":{
-  "postinstall": "bower install"
+  "scripts": {
+    "postinstall": "bower install"
   },
   "repository": {
     "type": "git",
@@ -20,6 +20,7 @@
     "gulp-rigger": "^0.5.8",
     "gulp-sass": "^2.2.0",
     "gulp-sourcemaps": "^1.6.0",
+    "gulp-svg-sprite": "^1.2.19",
     "gulp-uglify": "^1.5.1",
     "gulp-watch": "^4.3.5",
     "gulp.spritesmith": "^6.2.0",

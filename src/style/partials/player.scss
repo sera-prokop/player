@@ -1,0 +1,55 @@
+.player{
+  img{
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.description{
+  @include clearfix();
+  padding: 1.945525%;
+  box-sizing: border-box;
+  &__left{
+    float: left;
+    width: 86.575875%;
+  }
+  &__right{
+    float: right;
+    width: 13.424124%;
+    text-align: right;
+  }
+  &__title{
+    font-family: 'robotomedium', sans-serif;
+    font-size: 1.75em;
+    line-height: 1.29;
+    color: #212121;
+    margin: 0;
+  }
+  &__info{
+    font-size: 1.3125em;
+    line-height: 1.33;
+    color: #727272;
+    margin: 0.972762% 0;
+  }
+  &__time{
+    font-family: 'robotomedium', sans-serif;
+    font-size: 1.3125em;
+    line-height: 1.3333;
+    margin: 0;
+    color: #727272;
+    &:before{
+      content: "";
+      background-image: url("../images/clock.svg");
+      display: inline-block;
+      vertical-align: middle;
+      width: 18px;
+      height: 18px;
+      margin-right: 3%;
+    }
+  }
+  &__begin{
+    display: block;
+    font-size: 0.5714em;
+    line-height: 2;
+  }
+}

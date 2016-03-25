@@ -1,0 +1,107 @@
+.menu{
+  padding: 5.917159%;
+  &__list{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+}
+
+.future, .on-air, .record{
+  background: #3f51b5;
+}
+
+.footer-menu{
+  background: #303f9f;
+}
+
+.header-menu{
+  @include clearfix();
+  background: #303f9f;
+  color: #fff;
+  font-family: 'robotomedium', sans-serif;
+  font-size: 1.75em;//21
+  line-height: 1;
+  &__data{
+    float: left;
+    width: 70%;
+  }
+  &__menu{
+    background: url("../images/burger.svg") right no-repeat;
+    height: 0.992em;
+    float: right;
+    width: 30%;
+  }
+}
+
+.future, .on-air, .record{
+  color: #fff;
+  font-size: 1.3125em;
+  line-height: 1.1428;
+  &__title{
+    margin-bottom: 15px;
+  }
+}
+
+.translation{
+  margin-bottom: 10px;
+  &__time{
+    display: inline-block;
+    vertical-align: top;
+    width: 25.514792%;
+    font-size: 0.666em;
+  }
+  &__wrapper{
+    display: inline-block;
+    vertical-align: top;
+    width: 72.485207%;//245
+    box-sizing: border-box;
+    padding: 3.081632%;
+    background: #fff;
+    font-size: 0.666em;
+    color: #212121;
+  }
+  &__name{
+    text-decoration: none;
+    display: inline-block;
+    vertical-align: middle;
+    width: 85%;
+  }
+  &__number{
+    text-decoration: none;
+    display: inline-block;
+    vertical-align: middle;
+    width: 15%;
+    background: #727272;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    padding: 3%;
+    box-sizing: border-box;
+  }
+}
+
+.footer-menu{
+  @include clearfix();
+  &__button-archive{
+    float: left;
+    width: 70%;
+    background: #03a9f4;
+    border: none;
+    color: #fff;
+    font-family: 'robotobold', sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    padding: 1.5%;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  &__full{
+    background: url("../images/full.svg") right no-repeat;
+    height: 1.992em;
+    float: right;
+    width: 30%;
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
