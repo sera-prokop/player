@@ -1,0 +1,24 @@
+.footer
+  .center.clearfix
+    .footer-left
+      .footer-left__logo
+        a.logo-f(href="/")
+          img.logo-f__img(src="/images/logo-footer.png" alt="Logo")
+    .footer-right
+      .social-f
+        ul.social-f__list
+          -
+            var socialFooter = [
+              ['https://www.facebook.com/', 'fb', 'Facebook'],
+              ['http://vk.com/', 'vk', 'Вконтакте'],
+              ['https://twitter.com/', 'tw', 'Twitter']
+            ];
+          each param in socialFooter
+            li.social-f__item
+              a(href="#{param[0]}" class="social-f__link--#{param[1]}" target="_blank").social-f__link= param[2]
+      .footer-menu
+        ul.footer-menu__list
+          each item in headerMenuItem
+            li.footer-menu__item(class="footer-menu__item--#{item[1]}")
+              a(href="#{item[0]}").footer-menu__link= item[2]
+  .footer-bottom All rights reserved. 2016. no copy alowed

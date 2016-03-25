@@ -1,0 +1,16 @@
+-
+   var pagination = [
+      ['<', 'prev'],
+      ['1', 'one'],
+      ['2', 'two'],
+      ['3', 'thre'],
+      ['>', 'next']]
+- var number = 'one'
+.pagination.center
+  ul.pagination__list
+    each item in pagination
+      li.pagination__item(class="pagination__#{item[1]}")
+        if(number === item[1])
+          a.pagination__link(href="" class="pagination__link--active")= item[0]
+        else
+          a.pagination__link(href="" class="pagination__link-#{item[1]}")= item[0]

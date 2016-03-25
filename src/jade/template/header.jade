@@ -1,0 +1,66 @@
+header.header
+  .header-top
+    .center.clearfix
+      .social
+        ul.social__list
+          -
+            var socialItem = [
+              ['https://www.facebook.com/', 'fb', 'Facebook'],
+              ['http://vk.com/', 'vk', 'Вконтакте'],
+              ['https://twitter.com/', 'tw', 'Twitter']
+            ];
+          each param in socialItem
+            li.social__item
+              a(href="#{param[0]}" class="social__link--#{param[1]}" target="_blank").social__link= param[2]
+      .address
+        ul.address__list
+          li.address__item.address__name ул. Маяковская 6, офис 17
+          li.address__item.address__tel
+            a.address__link-tel(href="skype:+79211231213?call") +7 (921) 123-12-13
+
+
+
+  .header-middle
+    .center
+      .header-middle__logo
+        a.logo(href="/")
+          img.logo__img(src="/images/logo.png" alt="Logo")
+          h1.logo__h1 Логотип Cooltech
+      .header-middle__form
+        form.search(action="#" method="post")
+          input.search__input(type="text" placeholder="Что будем искать")
+          button.search__button(type="submit") Найти
+      .user-menu.header-middle__menu
+        ul.user-menu__list
+          -
+            var userMenuItem = [
+              ['#', 'map', 'Карта проезда'],
+              ['#', 'history', 'История заказов'],
+              ['#', 'recycler', 'Корзина']
+            ]
+          each item in userMenuItem
+            li.user-menu__item
+              a(href='#{item[0]}' class='user-menu__link--#{item[1]}').user-menu__link= item[2]
+
+
+
+  .header-menu
+    .center
+      ul.header-menu__list
+        -
+          var headerMenuItem =[
+            ['#', 'planshet', 'Планшеты'],
+            ['#', 'mobile', 'Мобильные телефоны'],
+            ['#', 'mp3', 'Mp3 плееры'],
+            ['#', 'pc', 'Персональные компьютеры'],
+            ['#', 'nout', 'Ноутбуки'],
+            ['#', 'accesories', 'Аксессуары'],
+            ['#', 'tech', 'Бытовая техника']
+          ]
+        - var select = 'mobile'
+        each item in headerMenuItem
+          li.header-menu__item
+            if(select === item[1])
+              a(href="#{item[0]}" class='header-menu__link--#{item[1]}').header-menu__link--active.header-menu__link= item[2]
+            else
+              a(href="#{item[0]}" class='header-menu__link--#{item[1]}').header-menu__link= item[2]

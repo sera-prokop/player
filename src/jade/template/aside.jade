@@ -1,0 +1,111 @@
+aside.aside
+  .tel
+      -
+        var tel = [
+          ['#', 'flagmans', 'Флагманы'],
+          ['#', 'budget', 'Бюджетная линейка']]
+      ul.tel__list
+        each item in tel
+          li.tel__item
+            a(href="#{item[0]}" class="tel__#{item[1]}").tel__link= item[2]
+  form.aside-form
+
+    .shop.aside-form-block
+      a.aside-wrapper-click(href="#")
+        .arrow
+        h3.shop__title.aside-form-title Наличие в магазинах
+      .aside-wrapper
+        -
+          var shopItem = [
+            ['Во всех магазинах', 'all-shop'],
+            ['В ближайшем ко мне магазине', 'my-shop']
+          ]
+        each item in shopItem
+          if item[1]==='all-shop'
+            .shop__radio.shop__radio--active(class="#{item[1]}")= item[0]
+          else
+            .shop__radio(class="#{item[1]}")= item[0]
+        input.shop__input(type="hidden")
+
+
+
+    .brends.aside-form-block
+      a.aside-wrapper-click(href="#")
+        .arrow
+        h3.brends__title.aside-form-title Бренды
+      .aside-wrapper
+        -
+          var brendsItem = [
+            ['Lenovo', 'lenovo'],
+            ['Apple', 'apple'],
+            ['Samsung', 'samsung'],
+            ['Asus', 'asus'],
+            ['Motorola', 'motorola']
+          ]
+        each item in brendsItem
+          div(class="aside-wrapper__check--#{item[1]}").aside-wrapper__check=item[0]
+            input.aside-wrapper__input.hidden(type="checkbox" id="#{item[1]}")
+        a(href="#").brends__link.aside-wrapper__link Сбросить фильтр
+
+
+    .cost.aside-form-block
+      a.aside-wrapper-click(href="#")
+        .arrow
+        h3.cost__title.aside-form-title Цена
+      .aside-wrapper.cost__wr
+        .cost__box
+          span.cost__span от
+          input#amount.cost__input(type="text")
+          span.cost__span до
+          input#amount2.cost__input.cost__input--last(type="text")
+          #slider.ui-slider.ui-slider-horizontal.ui-widget
+            .ui-slider-range
+            span.ui-slider-handle
+            span.ui-slider-handle
+
+
+    .color.aside-form-block
+      a.aside-wrapper-click(href="#")
+        .arrow
+        h3.color__title.aside-form-title Цвет
+      .aside-wrapper.color__wr
+        -
+          var colorItem = [
+            ['#', 'white', 'Белый'],
+            ['#', 'gray', 'Серый'],
+            ['#', 'black', 'Черный'],
+            ['#', 'd-blue', 'Синий'],
+            ['#', 'red', 'Красный'],
+            ['#', 'yellow', 'Желтый'],
+            ['#', 'biscuit', 'Св.коричн.'],
+            ['#', 'green', 'Зеленый'],
+            ['#', 'blue', 'Синий'],
+            ['#', 'purple', 'Фиолетовый'],
+            ['#', 'pink', 'Розовый'],
+            ['#', 'brown', 'Коричневый']
+          ]
+        ul.color__list
+          each item in colorItem
+            li.color__item
+              a(href='#{item[0]}' class='color__link--#{item[1]}').color__link= item[2]
+
+
+    .os.aside-form-block
+      a.aside-wrapper-click(href="#")
+        .arrow
+        h3.os__title.aside-form-title Операционные системы
+      .aside-wrapper
+        -
+          var osItem = [
+            ['Android', 'android'],
+            ['iOs', 'ios'],
+            ['Windows Mobile', 'win-mob'],
+            ['Symbian', 'symbian'],
+            ['Custom', 'custom']
+          ]
+        each item in osItem
+          div(class="aside-wrapper__check--#{item[1]}").aside-wrapper__check=item[0]
+            input.aside-wrapper__input.hidden(type="checkbox" id="#{item[1]}")
+        a(href="#").os__link.aside-wrapper__link Сбросить фильтр
+
+
