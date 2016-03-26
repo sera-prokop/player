@@ -1,7 +1,7 @@
 main.main
   section.left
     .player
-      img(src="http://lorempixel.com/image_output/nature-q-c-1920-1072-5.jpg", alt="")
+      img(src="images/pic.jpg", alt="")
     .description
       .description__left
         h1.description__title Доклад с очень длинным названием
@@ -10,14 +10,14 @@ main.main
         p.description__time 15:00
           span.description__begin Время начала
   section.right
-    .header-menu.menu
+    .header-menu
       .header-menu__data 20.04.2016
-      .header-menu__menu
+      a(href="#").header-menu__menu
     .future.menu
       .future__title Будущие трансляции
       ul.future__list.menu__list
         -
-          var translationFuture = [["17:00", "#", "Доклад с очень длинным названием", "12"],
+          var translationFuture = [["17:00", "#", "Доклад с очень длинным названием", "1"],
                                    ["17:00", "#", "Доклад о чем-то очень важном и интересном", "12"],
                                    ["17:00", "#", "Доклад о чем-то очень важном и интересном", "12"],
                                    ["17:00", "#", "Доклад о чем-то очень важном и интересном", "12"],
@@ -25,29 +25,31 @@ main.main
                                    ["17:00", "#", "Доклад о чем-то очень важном и интересном", "12"],
                                    ["17:00", "#", "Доклад о чем-то очень важном и интересном", "12"]]
         each item in translationFuture
-          li.future__item.translation
+          li.future__item.translation.menu__item
             .translation__time= item[0]
             .translation__wrapper
               a(href="#{item[1]}").translation__name= item[2]
-              a(href="#{item[1]}").translation__number= item[3]
+              a(href="#{item[1]}").translation__number
+                span= item[3]
 
     .on-air.menu
       .on-air__title On air
-      ul.on-air__list.menu__list
+      ul.on-air__list.menu__list.onair
         -
-          var translationOnAir = [["17:00", "#", "Доклад с очень длинным названием", "12"],
-                                   ["17:00", "#", "Доклад о чем-то очень важном и интересном", "12"],
-                                   ["17:00", "#", "Доклад о чем-то очень важном и интересном", "12"],
-                                   ["17:00", "#", "Доклад о чем-то очень важном и интересном", "12"],
-                                   ["17:00", "#", "Доклад о чем-то очень важном и интересном", "12"],
-                                   ["17:00", "#", "Доклад о чем-то очень важном и интересном", "12"],
-                                   ["17:00", "#", "Доклад о чем-то очень важном и интересном", "12"]]
+          var translationOnAir = [["17:00", "#", "Доклад с очень длинным названием", "1", ""],
+                                   ["17:00", "#", "Доклад о чем-то очень важном и интересном", "12", ""],
+                                   ["17:00", "#", "Доклад о чем-то очень важном и интересном", "12", "onair"],
+                                   ["17:00", "#", "Доклад о чем-то очень важном и интересном", "12", ""],
+                                   ["17:00", "#", "Доклад о чем-то очень важном и интересном", "12", "active"],
+                                   ["17:00", "#", "Доклад о чем-то очень важном и интересном", "12", ""],
+                                   ["17:00", "#", "Доклад о чем-то очень важном и интересном", "12", ""]]
         each item in translationOnAir
-          li.on-air__item.translation
+          li.on-air__item.translation.menu__item
             .translation__time= item[0]
             .translation__wrapper
               a(href="#{item[1]}").translation__name= item[2]
-              a(href="#{item[1]}").translation__number= item[3]
+              a(href="#{item[1]}" class="#{item[4]}").translation__number
+                span= item[3]
 
     .record.menu
       .record__title Записи
@@ -61,12 +63,13 @@ main.main
                                    ["17:00", "#", "Доклад о чем-то очень важном и интересном", "12"],
                                    ["17:00", "#", "Доклад о чем-то очень важном и интересном", "12"]]
         each item in translationOnAir
-          li.record__item.translation
+          li.record__item.translation.menu__item
             .translation__time= item[0]
             .translation__wrapper
               a(href="#{item[1]}").translation__name= item[2]
-              a(href="#{item[1]}").translation__number= item[3]
-    .footer-menu.menu
+              a(href="#{item[1]}").translation__number
+                span= item[3]
+    .footer-menu
       button.footer-menu__button-archive Записи предыдущих дней
       .footer-menu__full
 
