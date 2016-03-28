@@ -1,0 +1,90 @@
+.hall{
+  width: 72.256222%;//1028
+  background: rgba(73, 90, 185, 0.9);
+  font-family: 'robotomedium', sans-serif;
+// position: absolute;
+//   left: 2%;
+//   right: 2%;
+//   top: 0;
+  &__list{
+    margin:0;
+    list-style-type: none;
+    padding: 20px 1.945525% 10px 1.945525%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+  }
+  &__item{
+    display: inline-block;
+    vertical-align: top;
+    width: 18.871595%;//194
+    margin-right: 0.686381%;
+    background: rgba(181, 187, 225, 0.9);
+    box-sizing: border-box;
+    text-align: left;
+    display: flex;
+    margin-bottom: 10px;
+    &--active{
+      background: rgba(255, 255, 255, 0.9);
+      position: relative;
+      &:before{
+        content: "";
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        height: 8px;
+        width: 8px;
+        border-radius: 50%;
+        background: red;
+      }
+      .hall{
+        &__pause{
+          display: none;
+        }
+        &__descr{
+          &:before{
+            content: "Сейчас идет";
+          }
+        }
+      }
+    }
+  }
+  &__link{
+    display: inline-block;
+    vertical-align: top;
+    text-decoration: none;
+    color: rgb(33, 33, 33);
+    padding: 20px 10.309278%;
+  }
+  &__number{
+      font-size: 1.55em;
+      line-height: 1.143;
+      margin: 0;
+  }
+  &__title{
+    font-size: 1.55em;
+    line-height: 1.143;
+    margin: 0;
+  }
+  &__pause{
+    font-size: 0.95em;
+    line-height: 1.44;
+    margin:10px 0 0 0;
+  }
+  &__descr{
+    font-size: 0.875em;
+    line-height: 1.5;
+    margin-bottom: 0;
+    margin-top: 5px;
+    &:before{
+      content: "Затем";
+      display: block;
+      font-size: 0.857em;
+      line-height: 1.75;
+      color: rgb(114, 114, 114);
+      font-family: 'robotoregular', sans-serif;
+      margin-top: 8px;
+    }
+  }
+}

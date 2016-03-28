@@ -5,8 +5,9 @@ body{
 }
 .main{
   @include clearfix();
+  // min-width: 600px;
   // width: 96%;
-  // margin: 0 auto;
+  margin: 0 auto;
   font-family: 'robotoregular', sans-serif;
   position: relative;
 }

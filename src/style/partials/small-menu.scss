@@ -1,0 +1,116 @@
+.small-menu{
+
+    width: 4.978038%;//68
+    text-align: center;
+
+
+
+  // .left{
+  //   width: 95.021962%;
+
+}
+.small-menu-header{
+
+  background: #303f9f;
+  &__burger{
+    background: url("../images/burger.svg") center no-repeat;
+    height: 24px;
+    display: block;
+    padding:20px 0;
+  }
+}
+
+  .small-menu-middle{
+    padding: 5.917159%;
+    background: #3f51b5;
+    &__list{
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+    }
+  }
+  .small-menu-middle{
+    color: #afb4db;
+    font-size: 0.875em;
+    padding: 20px 0;
+    line-height: 1.1428;
+    &__title{
+      margin-bottom: 15px;
+    }
+  }
+
+  .translation{
+    & .onair{
+      position: relative;
+      & span{
+        background: #303f9f;
+      }
+      &:before{
+        content: "";
+        display: block;
+        height: 6px;
+        width: 6px;
+        background: red;
+        border-radius: 50%;
+        position: absolute;
+        right: 10%;
+      }
+    }
+    & .active{
+      &:hover{
+        background: #8bc34a;
+        & span{
+          background: #72aa3d;
+        }
+      }
+      background: #8bc34a;
+      & span{
+        background: #72aa3d;
+      }
+    }
+    &__number{
+      text-decoration: none;
+      display: block;
+      vertical-align: middle;
+      color: #fff;
+      padding: 12px 0;
+      &:hover{
+        background: #303f9f;
+        & span{
+          background: #6a78c6;
+        }
+      }
+    }
+    & span{
+      display: inline-block;
+      background: #6a78c6;
+      border-radius: 50%;
+      text-align: center;
+      width: 30px;
+        height: 30px;
+        line-height: 30px;
+      box-sizing: border-box;
+    }
+  }
+
+  .footer-menu{
+    background: #303f9f;
+    &__button-archive{
+      display: none;
+    }
+    &__full{
+      background: url("../images/full.svg") center no-repeat;
+      height: 1.992em;
+      padding: 15px 0;
+    }
+    &:before{
+      content: "";
+      background: url("../images/records.svg") center no-repeat;
+      display: block;
+      height: 1.992em;
+      padding: 15px 0;
+      border-bottom: 1px solid #5a69bf;
+
+    }
+  }
+

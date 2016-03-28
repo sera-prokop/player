@@ -1,0 +1,24 @@
+.small-menu
+  .small-menu-header
+    a(href="#").small-menu-header__burger
+  .small-menu-middle
+    .small-menu-middle__title On air
+    ul.on-air__list.small-menu-middle__list
+      -
+        var translationOnAir = [["#","1", ""],
+                                 ["#", "2", ""],
+                                 ["#", "3", "onair"],
+                                 ["#", "4", ""],
+                                 ["#", "5", "active"],
+                                 ["#", "6", ""],
+                                 ["#", "7", ""],
+                                 ["#", "8", ""],
+                                 ["#", "9", ""],
+                                 ["#", "10", ""]]
+      each item in translationOnAir
+        li.on-air__item.translation.menu__item
+          a(href="#{item[1]}" class="#{item[2]}").translation__number
+            span= item[1]
+
+  .footer-menu
+    .footer-menu__full
